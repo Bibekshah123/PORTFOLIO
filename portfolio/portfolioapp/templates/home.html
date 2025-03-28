@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="position-relative text-center py-5">
+    <div class="container">
+        <h1 class="fw-bold">I'm Bibek Shah</h1>
+        <p class="text-muted"> Backend Developer</p>
+        <a href="{% static 'docs/Bibek_Shah_CV.pdf' %}" class="btn btn-primary mt-3" target="_blank">Resume</a>
+        <img src="{% static 'static/images/Bibek shah.jpg' %}" alt="Bibek Image" class="top-right-img img-fluid mt-3 rounded-circle hover-effect">
+    </div>
+</section>
+
+<style>
+    .top-right-img {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        width: 400px;
+        height: auto;
+        border-radius: 200px;
+    }
+
+    /* Make the image circular */
+.top-right-img {
+    width: 400px; /* Adjust size as needed */
+    height: 400px;
+    object-fit: contain;
+    border-radius: 50%;
+    position: absolute;
+    top: -80px;
+    right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect - Scale up slightly */
+.top-right-img:hover {
+    transform: scale(1.1);
+}
+
+    
+</style>
+
+
+{% endblock %}

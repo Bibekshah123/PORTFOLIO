@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Message Sent{% endblock %}
+
+{% block content %}
+<section class="py-5 text-center">
+    <div class="container">
+        <h1 class="display-4">Thank You!</h1>
+        <p class="lead">Your message has been successfully sent. We'll get back to you soon.</p>
+        <a href="{% url 'home' %}" class="btn btn-primary mt-3">Return to Home</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h2 class="fw-bold text-center"> Projects</h2>
+         <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card shadow border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Expenses Tracker System Web App</h5>
+                        <p class="card-text">The Expenses Tracker System web app was developed using PHP for server-side functionality and MySQL
+                            for efficient database management, ensuring systematic recording and retrieval of expense data.
+                            This project successfully enabled users to track and analyze their expenses on a daily, monthly, and yearly
+                            basis, providing valuable insights into their spending habits and promoting better financial management.
+                        </p>                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Accident dataset analysis and visualization </h5>
+                        <p class="card-text">Conducted a comprehensive analysis of accident data using R, employing statistical methods and data
+                            visualization techniques to uncover patterns and trends.
+                            This project provided critical insights into accident data, contributing to strategies aimed at improving road
+                            safety and reducing the occurrence of accidents.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Hospital Management System </h5>
+                        <p class="card-text">Developed a Hospital Management System using Python, incorporating libraries for data processing and GUI
+                        development to efficiently manage patient records, doctor schedules, and appointment bookings.
+                        This project delivered a user-friendly interface that streamlined hospital operations, enhancing record
+                        management and optimizing appointment scheduling.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
