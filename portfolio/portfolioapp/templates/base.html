@@ -30,41 +30,7 @@
             </div>
         </div>
     </nav>
-
-    <style>
-        .logo{
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .container-fluid {
-            max-width: 1200px; /* Set a standard width */
-            margin: 0 auto; /* Center align the content */
-        }
-        
-        /* Navbar Styling */
-        .navbar {
-            background-color: black;
-            padding: 15px 0;
-            
-        }
-
-        .navbar .nav-link {
-            color: white;
-            font-size: 16px;
-            font-weight: 500;
-            transition: color 0.3s ease-in-out, transform 0.2s;
-        }
-
-        .navbar .nav-link:hover {
-            color: red;
-        }
-
-        .logo{
-            border-radius: 50px;
-        }
-    </style>
-
+    
     <!-- Main Content -->
     <main class="container my-5">
         {% block content %}
@@ -94,6 +60,34 @@
 
         main {
             flex: 1;
+        }
+
+        .container-fluid {
+            max-width: 1200px; /* Set a standard width */
+            margin: 0 auto; /* Center align the content */
+        }
+        
+        /* Navbar Styling */
+        .navbar {
+            background-color: black;
+            padding: 10px 0 ;
+            
+        }
+
+        .navbar .nav-link {
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out, transform 0.2s;
+        }
+
+        .navbar .nav-link:hover {
+            color: red;
+        }
+
+        .logo{
+            border-radius: 50px;
+            object-fit: cover;
         }
 
         /* Footer Styling */

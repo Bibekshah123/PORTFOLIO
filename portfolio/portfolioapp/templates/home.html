@@ -37,24 +37,25 @@
     transform: scale(1.1);
 }
 
-.cursor {
-    display: inline-block;
-    width: 2px;
-    height: 24px;
-    background-color: black;
-    animation: blink 0.7s infinite;
+#typing-text {
+    display: inline-block; /* Prevents layout shifts */
+    caret-color: transparent; /* Hides the blinking cursor */
+    border: none; /* Removes any accidental border */
+    outline: none; /* Removes focus outline */
+}
+
+#typing-text::after {
+    animation: blink 1s infinite;
 }
 
 @keyframes blink {
-    50% {
-        opacity: 0;
-    }
+    50% { opacity: 0; }
 }
 
 </style>
 
 <script>
-    const texts = ["I'm Bibek Shah", "I'm a Backend Developer"];
+    const texts = ["I'm Bibek Shah", "Nothing Impossible", "Vibe Coder"]; // Fixed typo: "Impossibe" -> "Impossible"
     let textIndex = 0;
     let charIndex = 0;
     const speed = 100; // Typing speed
