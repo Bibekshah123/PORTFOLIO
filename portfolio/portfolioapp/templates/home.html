@@ -10,7 +10,7 @@
         <h1 class="fw-bold">Hey there👋</h1>
         <h1 class="fw-bold"><span id="typing-text"></span><span class="cursor">|</span></h1>
         <a href="{% static 'docs/Bibek_Shah_CV.pdf' %}" class="btn btn-primary mt-3" target="_blank">Download Resume</a>
-        <img src="{% static 'images/Bibek shah.jpg' %}" alt="Bibek Image" class="top-right-img img-fluid mt-3 rounded-circle hover-effect">
+        <img src="{% static 'images/Bibek shah.jpg' %}" alt="Bibek Image" class="img">
     </div>
 </section>
 
@@ -21,19 +21,19 @@
    }
 
     /* Make the image circular */
-.top-right-img {
+.img {
     width: 400px; /* Adjust size as needed */
     height: 400px;
     object-fit: cover;
     border-radius: 50%;
     position: absolute;
-    top: -30px;
+    top:-20px;
     right: 20px;
     transition: transform 0.3s ease-in-out;
 }
 
 /* Hover effect - Scale up slightly */
-.top-right-img:hover {
+.img:hover {
     transform: scale(1.1);
 }
 
@@ -50,7 +50,6 @@
         opacity: 0;
     }
 }
-
 
 </style>
 
