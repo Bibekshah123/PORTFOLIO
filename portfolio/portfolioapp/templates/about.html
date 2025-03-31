@@ -12,7 +12,7 @@
                 <p class="text-muted">I am a dedicated data science student with a strong passion for uncovering insights through data visualization and
                     developing predictive models using machine learning. Proficient in Python, I specialize in crafting clear, impactful visualizations 
                     that translate complex datasets into actionable insights. My expertise in machine learning enables me to design and implement intelligent 
-                    solutions to solve real-world problems. Additionally, as a skilled Django developer, I have experience building dynamic web applications 
+                    solutions to solve real-world problems. Additionally, as a Django developer, I have experience building dynamic web applications 
                     and delivering scalable solutions. With a solid foundation in data science and web development, 
                     I am well-equipped to deliver innovative projects and contribute to advancing the field through cutting-edge techniques and tools.</p>
             </div>
@@ -23,15 +23,22 @@
 
 <section class="contact-section py-5">
     <div class="container text-center">
+        <div class="lc">
         <h2>Let's Connect!</h2>
+        </div>
         <p>I'm always open to collaboration and exciting projects.</p>
         <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Get in Touch</a>
     </div>
 </section>
 
 <style>
-    .mb-3{
+    .mb-3:hover{
+    color: red; /* Change color on hover */
+    }
+
+    .lc:hover{
         color: red;
     }
+</style>
 
 {% endblock %}

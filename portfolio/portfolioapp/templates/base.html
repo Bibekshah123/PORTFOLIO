@@ -14,7 +14,7 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-gray">
-        <div class="container">
+        <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,6 +31,12 @@
     </nav>
 
     <style>
+
+        .container-fluid {
+            max-width: 1200px; /* Set a standard width */
+            margin: 0 auto; /* Center align the content */
+        }
+        
         /* Navbar Styling */
         .navbar {
             background-color: black; /* Gray background */
@@ -46,7 +52,6 @@
 
         .navbar .nav-link:hover {
             color: red;
-            transform: scale(1.05);
         }
     </style>
 
@@ -75,6 +80,7 @@
             flex-direction: column;
             background-color: white; /* Light background */
             color: black;
+            overflow: hidden;
             
         }
 
