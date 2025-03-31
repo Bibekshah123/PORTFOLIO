@@ -1,2 +1,12 @@
+/* Social Icons Hover Effect */
+.social-links .social-icon {
+    font-size: 24px; /* Adjust icon size */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-links .social-icon:hover {
+    color: red !important; /* Ensure the color changes to red on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon */
+}
 
 

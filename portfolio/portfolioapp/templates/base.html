@@ -73,8 +73,9 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            background-color: #f8f9fa; /* Light background */
+            background-color: white; /* Light background */
             color: black;
+            
         }
 
         main {
@@ -88,18 +89,15 @@
             padding: 20px 0;
         }
 
-        .footer-text {
-            font-size: 14px;
-            transition: color 0.3s ease-in-out;
+        .social-links .social-icon {
+            font-size: 20px; /* Adjust icon size */
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
-
-        /* Social Media Icons */
-        .social-icon {
-            font-size: 20px;
-            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-
         
+        .social-links .social-icon:hover {
+            color: black; /* Change icon color to red */
+            transform: scale(1.2); /* Slightly enlarge the icon on hover */
+        }
 
     </style>
 

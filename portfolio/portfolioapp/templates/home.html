@@ -7,8 +7,8 @@
 {% block content %}
 <section class="position-relative text-left py-5">
     <div class="container">
-        <h1 class="fw-bold">Hey there👋 I'm Bibek Shah </h1>
-        <h2 class="text-muted"> Backend Developer </h2>
+        <h1 class="fw-bold">Hey there👋</h1>
+        <h1 class="fw-bold"><span id="typing-text"></span><span class="cursor">|</span></h1>
         <a href="{% static 'docs/Bibek_Shah_CV.pdf' %}" class="btn btn-primary mt-3" target="_blank">Download Resume</a>
         <img src="{% static 'images/Bibek shah.jpg' %}" alt="Bibek Image" class="top-right-img img-fluid mt-3 rounded-circle hover-effect">
     </div>
@@ -37,7 +37,58 @@
     transform: scale(1.1);
 }
 
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 24px;
+    background-color: black;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
 </style>
+
+<script>
+    const texts = ["I'm Bibek Shah", "I'm a Backend Developer"];
+    let textIndex = 0;
+    let charIndex = 0;
+    const speed = 100; // Typing speed
+    const eraseSpeed = 50; // Erase speed
+    const delay = 2000; // Delay before erasing
+    const typingText = document.getElementById("typing-text");
+
+    function type() {
+        if (charIndex < texts[textIndex].length) {
+            typingText.textContent += texts[textIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, speed);
+        } else {
+            setTimeout(erase, delay);
+        }
+    }
+
+    function erase() {
+        if (charIndex > 0) {
+            typingText.textContent = texts[textIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, eraseSpeed);
+        } else {
+            textIndex = (textIndex + 1) % texts.length;
+            setTimeout(type, speed);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(type, 500);
+    });
+</script>
+
 
 
 {% endblock %}
