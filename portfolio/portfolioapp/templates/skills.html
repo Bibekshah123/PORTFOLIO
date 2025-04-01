@@ -1,94 +1,91 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block title %}Skills{% endblock %}
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %}Skills{% endblock %} 
 
 {% block content %}
 <section class="skills py-5">
-    <div class="container">
-        <div class="row text-center">
-            <!-- Python -->
-            <div class="col-md-3 col-6 mb-4">
-                <i class="fab fa-python fa-2x mb-2 text-warning"></i>
-                <h5>Python</h5>
-            </div>
-            <!-- R -->
-            <div class="col-md-3 col-6 mb-4">
-                <i class="fab fa-r-project fa-2x mb-2 text-success"></i>
-                <h5>R</h5>
-            </div>
-            <!-- HTML -->
-            <div class="col-md-3 col-6 mb-4">
-                <i class="fab fa-html5 fa-2x mb-2 text-danger"></i>
-                <h5>HTML</h5>
-            </div>
-            <!-- CSS -->
-            <div class="col-md-3 col-6 mb-4">
-                <i class="fab fa-css3-alt fa-2x mb-2 text-primary"></i>
-                <h5>CSS</h5>
-            </div>
-            <!-- Django -->
-            <div class="col-md-3 col-6 mb-4">
-                <i class="fab fa-django fa-2x mb-2 text-success"></i>
-                <h5>Django</h5>
-            </div>
-            <!-- Git -->
-            <div class="col-md-3 col-6 mb-4">
-                <i class="fab fa-git fa-2x mb-2 text-muted"></i>
-                <h5>Git</h5>
-            </div>
-            <!-- GitHub -->
-            <div class="col-md-3 col-6 mb-4">
-                <i class="fab fa-github fa-2x mb-2 text-dark"></i>
-                <h5>GitHub</h5>
-            </div>
-            <!-- Bash -->
-            <div class="col-md-3 col-6 mb-4">
-                <i class="fab fa-linux fa-2x mb-2 text-info"></i>
-                <h5>Bash</h5>
-            </div>
-            <!-- SQL -->
-            <div class="col-md-3 col-6 mb-4">
-                <i class="fas fa-database fa-2x mb-2 text-primary"></i>
-                <h5>SQL</h5>
-            </div>
-            <!-- PHP -->
-            <div class="col-md-3 col-6 mb-4">
-                <i class="fab fa-php fa-2x mb-2 text-danger"></i>
-                <h5>PHP</h5>
-            </div>
-            <!-- AI -->
-            <div class="col-md-3 col-6 mb-4">
-                <i class="fas fa-robot fa-2x mb-2 text-info"></i>
-                <h5>AI</h5>
-            </div>
-            <!-- Machine Learning -->
-            <div class="col-md-3 col-6 mb-4">
-                <i class="fas fa-brain fa-2x mb-2 text-primary"></i>
-                <h5>ML</h5>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row text-center">
+      <!-- Python -->
+      <div class="col-md-3 col-6 mb-4">
+        <i class="fab fa-python fa-2x mb-2 text-warning"></i>
+        <h5>Python</h5>
+      </div>
+      <!-- R -->
+      <div class="col-md-3 col-6 mb-4">
+        <i class="fab fa-r-project fa-2x mb-2 text-success"></i>
+        <h5>R</h5>
+      </div>
+      <!-- HTML -->
+      <div class="col-md-3 col-6 mb-4">
+        <i class="fab fa-html5 fa-2x mb-2 text-danger"></i>
+        <h5>HTML</h5>
+      </div>
+      <!-- CSS -->
+      <div class="col-md-3 col-6 mb-4">
+        <i class="fab fa-css3-alt fa-2x mb-2 text-primary"></i>
+        <h5>CSS</h5>
+      </div>
+      <!-- Django -->
+      <div class="col-md-3 col-6 mb-4">
+        <i class="fab fa-django fa-2x mb-2 text-success"></i>
+        <h5>Django</h5>
+      </div>
+      <!-- Git -->
+      <div class="col-md-3 col-6 mb-4">
+        <i class="fab fa-git fa-2x mb-2 text-muted"></i>
+        <h5>Git</h5>
+      </div>
+      <!-- GitHub -->
+      <div class="col-md-3 col-6 mb-4">
+        <i class="fab fa-github fa-2x mb-2 text-dark"></i>
+        <h5>GitHub</h5>
+      </div>
+      <!-- Bash -->
+      <div class="col-md-3 col-6 mb-4">
+        <i class="fab fa-linux fa-2x mb-2 text-info"></i>
+        <h5>Bash</h5>
+      </div>
+      <!-- SQL -->
+      <div class="col-md-3 col-6 mb-4">
+        <i class="fas fa-database fa-2x mb-2 text-primary"></i>
+        <h5>SQL</h5>
+      </div>
+      <!-- PHP -->
+      <div class="col-md-3 col-6 mb-4">
+        <i class="fab fa-php fa-2x mb-2 text-danger"></i>
+        <h5>PHP</h5>
+      </div>
+      <!-- AI -->
+      <div class="col-md-3 col-6 mb-4">
+        <i class="fas fa-robot fa-2x mb-2 text-info"></i>
+        <h5>AI</h5>
+      </div>
+      <!-- Machine Learning -->
+      <div class="col-md-3 col-6 mb-4">
+        <i class="fas fa-brain fa-2x mb-2 text-primary"></i>
+        <h5>ML</h5>
+      </div>
     </div>
+  </div>
 </section>
 
-
-
 <style>
-    .skills .col-md-3 {
-        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-    }
+  .skills .col-md-3 {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
 
-    .skills .col-md-3:hover {
-        transform: scale(1.3);
-    }
+  .skills .col-md-3:hover {
+    transform: scale(1.3);
+  }
 
-    .skills .col-md-3 i {
-        transition: color 0.3s ease-in-out;
-    }
+  .skills .col-md-3 i {
+    transition: color 0.3s ease-in-out;
+  }
 
-    .skills .col-md-3:hover i {
-        color: #ff9800; /* Change icon color on hover */
-    }
-</style>    
+  .skills .col-md-3:hover i {
+    color: #ff9800; /* Change icon color on hover */
+  }
+</style>
 
 {% endblock %}

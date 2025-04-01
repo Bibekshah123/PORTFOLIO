@@ -2,114 +2,165 @@
 {% load static %}
 
 <html lang="en">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} Bibek Shah {% endblock %}</title>
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} Bibek Shah {% endblock %}</title>
+    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gray">
-        <div class="container-fluid">
-            <img src="{% static 'images/logo.png' %}" alt="BS Logo" height="40" class="logo">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'projects' %}">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'skills' %}">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-black bg-black">
+    <div class="container-fluid">
+        <!-- Logo with Home Link -->
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static 'images/logo.png' %}" alt="BS Logo" height="50" class="logo">
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     
+        <!-- Collapsible Navbar -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'skills' %}">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
     <!-- Main Content -->
-    <main class="container my-5">
-        {% block content %}
-        {% endblock %}
-    </main>
+    <main class="container my-5">{% block content %} {% endblock %}</main>
 
     <!-- Footer -->
     <footer class="bg-gray text-white py-4">
-        <div class="container text-center">
-            <p class="footer-text">All rights reserved | Copyright &copy; {% now "Y" %} Bibek Shah</p>
-            <div class="social-links">
-                <a href="https://github.com/Bibekshah123" class="text-white mx-2 social-icon" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/bibekshah1234/" class="text-white mx-2 social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+      <div class="container text-center">
+        <p class="footer-text">
+          All rights reserved | Copyright &copy; {% now "Y" %} Bibek Shah
+        </p>
+        <div class="social-links">
+          <a
+            href="https://github.com/Bibekshah123"
+            class="text-white mx-2 social-icon"
+            target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/bibekshah1234/"
+            class="text-white mx-2 social-icon"
+            target="_blank"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
         </div>
+      </div>
     </footer>
 
     <style>
-        /* Page Layout */
-        html, body {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            background-color: white; /* Light background */
-            color: black;
-        }
+      /* Page Layout */
+      html,
+      body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: white; /* Light background */
+        color: black;
+      }
 
-        main {
-            flex: 1;
-        }
+      /* Hide the scrollbar for webkit-based browsers */
+      ::-webkit-scrollbar {
+          display: none; /* Hide the scrollbar */
+      }
 
-        .container-fluid {
-            max-width: 1200px; /* Set a standard width */
-            margin: 0 auto; /* Center align the content */
-        }
+
+      main {
+        flex: 1;
+      }
+
+      .container-fluid {
+        max-width: 1200px; /* Set a standard width */
+        margin: 0 auto; /* Center align the content */
+      }
+
+      {% comment %} /* Navbar Styling */
+      .navbar {
+        background-color: black;
+        padding: 10px 0;
+      } {% endcomment %}
+
+      .navbar .nav-link {
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        transition: color 0.3s ease-in-out, transform 0.2s;
+      }
+
+      .navbar .nav-link:hover {
+        color: red;
         
-        /* Navbar Styling */
-        .navbar {
-            background-color: black;
-            padding: 10px 0 ;
-            
-        }
+      }
 
-        .navbar .nav-link {
-            color: white;
-            font-size: 20px;
-            font-weight: 500;
-            transition: color 0.3s ease-in-out, transform 0.2s;
-        }
+      .logo {
+        border-radius: 50px;
+        object-fit: cover;
+      }
 
-        .navbar .nav-link:hover {
-            color: red;
-        }
+      /* Footer Styling */
+      footer {
+        background-color: black; /* Gray background */
+        text-align: center;
+        padding: 20px 0;
+      }
 
-        .logo{
-            border-radius: 50px;
-            object-fit: cover;
-        }
+      .social-links .social-icon {
+        font-size: 20px; /* Adjust icon size */
+        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+      }
 
-        /* Footer Styling */
-        footer {
-            background-color: black; /* Gray background */
-            text-align: center;
-            padding: 20px 0;
-        }
+      .social-links .social-icon:hover {
+        color: black; /* Change icon color to red */
+        transform: scale(1.2); /* Slightly enlarge the icon on hover */
+      }
 
-        .social-links .social-icon {
-            font-size: 20px; /* Adjust icon size */
-            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
-        
-        .social-links .social-icon:hover {
-            color: black; /* Change icon color to red */
-            transform: scale(1.2); /* Slightly enlarge the icon on hover */
-        }
-
+      .navbar-toggler {
+        border: 2px solid white; /* White border */
+    }
+    
+    .navbar-toggler-icon {
+        filter: invert(1); /* Converts black icon to white */
+    }
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-</body>
+  </body>
 </html>
