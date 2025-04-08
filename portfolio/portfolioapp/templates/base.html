@@ -38,22 +38,22 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                  <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+                  <a class="nav-link {% if request.path == '/projects/' %}active{% endif %}" href="{% url 'projects' %}">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'skills' %}">Skills</a>
+                  <a class="nav-link {% if request.path == '/skills/' %}active{% endif %}" href="{% url 'skills' %}">Skills</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'certificate' %}">Certification</a>
-              </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                  <a class="nav-link {% if request.path == '/certificate/' %}active{% endif %}" href="{% url 'certificate' %}">Certification</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                  <a class="nav-link {% if request.path == '/about/' %}active{% endif %}" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}" href="{% url 'contact' %}">Contact</a>
                 </li>
                
             </ul>
@@ -115,12 +115,6 @@
         margin: 0 auto; /* Center align the content */
       }
 
-      {% comment %} /* Navbar Styling */
-      .navbar {
-        background-color: black;
-        padding: 10px 0;
-      } {% endcomment %}
-
       .navbar .nav-link {
         color: white;
         font-size: 20px;
@@ -131,6 +125,10 @@
       .navbar .nav-link:hover {
         color: red;
         
+      }
+
+      .navbar .nav-link.active {
+        color: red;
       }
 
       .logo {
