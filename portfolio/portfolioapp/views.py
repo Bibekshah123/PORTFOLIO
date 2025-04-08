@@ -37,3 +37,6 @@ def projects(request):
 
 def skills(request):
     return render(request, 'skills.html')
+
+def Certificate(request):
+    return render(request, 'certificate.html')

@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Certificates{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- Certificate 1 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="certificate-card p-3 bg-light border rounded shadow-sm">
+                    <a href="{% static 'images/certificates/1.png' %}" target="_blank">
+                        <img src="{% static 'images/certificates/1.png' %}" class="img-fluid rounded" alt="Certificate 1">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="certificate-card p-3 bg-light border rounded shadow-sm">
+                    <a href="{% static 'images/certificates/2.png' %}" target="_blank">
+                        <img src="{% static 'images/certificates/2.png' %}" class="img-fluid rounded" alt="Certificate 2">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificate 3 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="certificate-card p-3 bg-light border rounded shadow-sm">
+                    <a href="{% static 'images/certificates/3.png' %}" target="_blank">
+                        <img src="{% static 'images/certificates/3.png' %}" class="img-fluid rounded" alt="Certificate 3">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificate 4 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="certificate-card p-3 bg-light border rounded shadow-sm">
+                    <a href="{% static 'images/certificates/4.png' %}" target="_blank">
+                        <img src="{% static 'images/certificates/4.png' %}" class="img-fluid rounded" alt="Certificate 4">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificate 5 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="certificate-card p-3 bg-light border rounded shadow-sm">
+                    <a href="{% static 'images/certificates/5.png' %}" target="_blank">
+                        <img src="{% static 'images/certificates/5.png' %}" class="img-fluid rounded" alt="Certificate 5">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificate 6 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="certificate-card p-3 bg-light border rounded shadow-sm">
+                    <a href="{% static 'images/certificates/6.png' %}" target="_blank">
+                        <img src="{% static 'images/certificates/6.png' %}" class="img-fluid rounded" alt="Certificate 6">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificate 7 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="certificate-card p-3 bg-light border rounded shadow-sm">
+                    <a href="{% static 'images/certificates/7.png' %}" target="_blank">
+                        <img src="{% static 'images/certificates/7.png' %}" class="img-fluid rounded" alt="Certificate 7">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificate 8 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="certificate-card p-3 bg-light border rounded shadow-sm">
+                    <a href="{% static 'images/certificates/8.png' %}" target="_blank">
+                        <img src="{% static 'images/certificates/8.png' %}" class="img-fluid rounded" alt="Certificate 8">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificate 9 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="certificate-card p-3 bg-light border rounded shadow-sm">
+                    <a href="{% static 'images/certificates/9.png' %}" target="_blank">
+                        <img src="{% static 'images/certificates/9.png' %}" class="img-fluid rounded" alt="Certificate 9">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Hover CSS -->
+<style>
+    .certificate-card img {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .certificate-card:hover img {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+</style>
+{% endblock %}
