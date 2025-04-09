@@ -1,1 +1,5 @@
-.evn
+.evn/
+venv/
+*.pyc
+*.pyo
+*.pyd
