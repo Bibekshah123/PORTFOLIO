@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-zzvb0eh1e4&tqkolqzq38da(jscf5l#b27mvtr3e8j(j9a=1e*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -125,6 +125,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS =[
     BASE_DIR, "static"
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -140,3 +141,4 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "bibekshah995@gmail.com"  # Replace with your Gmail
 EMAIL_HOST_PASSWORD = "axow ppce znue nyur"  # Use an App Password, NOT your Gmail password!
+
