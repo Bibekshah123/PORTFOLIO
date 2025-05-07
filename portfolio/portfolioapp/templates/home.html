@@ -4,7 +4,7 @@
 {% block title %}Home{% endblock %} 
 {% block content %}
 <section class="position-relative text-left py-5">
-  <div class="container">
+  <div class="container-fluid">
     <h1 class="fw-bold">Hey there👋</h1>
     <h1 class="fw-bold">
       <span id="typing-text"></span><span class="cursor">|</span>
@@ -66,27 +66,10 @@
   .img:hover {
     transform: scale(1.1);
   }
-
-  {% comment %} #typing-text {
-    display: inline-block; /* Prevents layout shifts */
-    caret-color: transparent; /* Hides the blinking cursor */
-    border: none; /* Removes any accidental border */
-    outline: none; /* Removes focus outline */
-  } {% endcomment %}
-
-  {% comment %} #typing-text::after {
-    animation: blink 1s infinite;
-  } {% endcomment %}
-
-  {% comment %} @keyframes blink {
-    50% {
-      opacity: 0;
-    }
-  } {% endcomment %}
 </style>
 
 <script>
-  const texts = ["I'm Bibek Shah", "Nothing Impossible", "Vibe Coder"]; // Fixed typo: "Impossibe" -> "Impossible"
+  const texts = ["I'm Bibek Shah", "Python", "Django Developer"]; 
   let textIndex = 0;
   let charIndex = 0;
   const speed = 100; // Typing speed
